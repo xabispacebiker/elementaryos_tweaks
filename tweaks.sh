@@ -42,6 +42,13 @@ disable_apport()
 	service apport stop &>/dev/null
 	service apport start force_start=1 &>/dev/null
 }
+enable_desktop()
+{
+	apt-get install nautilus
+	apt-get install dconf-tools
+	echo XDG_DESKTOP_DIR="$HOME/Desktop" > ~/.config/user-dirs.dirs
+	chmod -R 777 Desktop
+}
 # 0. Check for root permision:
 check_root()
 # 1. Update the system:
