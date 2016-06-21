@@ -55,6 +55,12 @@ add_tweaks()
 	sudo apt-get update
 	sudo apt-get install elementary-tweaks
 }
+create_folders_in_files()
+{
+	# This is a known bug in the file manager
+	# http://elementaryos.stackexchange.com/questions/3771/how-to-get-right-click-menu-when-folder-in-column-view
+	# Ctrl+Shift+N
+}
 
 # 0. Check for root permision:
 check_root()
