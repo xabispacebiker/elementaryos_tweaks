@@ -49,6 +49,13 @@ enable_desktop()
 	echo XDG_DESKTOP_DIR="$HOME/Desktop" > ~/.config/user-dirs.dirs
 	chmod -R 777 Desktop
 }
+add_tweaks()
+{
+	sudo add-apt-repository -y ppa:justsomedood/justsomeelementary
+	sudo apt-get update
+	sudo apt-get install elementary-tweaks
+}
+
 # 0. Check for root permision:
 check_root()
 # 1. Update the system:
